@@ -4,6 +4,8 @@
 
 > "Lo mas sercano que tenemos a los viajes en el tiempo en git jejeje"
 
+<br>
+
 ## Indice
 
 ---
@@ -13,6 +15,8 @@
 - [ ] 2.1. [Configuracion inicial de de Git](#21-configuracion-inicial-de-de-git)
 - [ ] 3. [Nuestro primer repositorio](#3-nuestro-primer-repositorio)
 - [ ] 4. [](#)
+
+<br>
 
 ## 1. ¿Por que nos interesa saber Git o un Sistema de Control de Versiones?
 
@@ -29,6 +33,8 @@ Conocer Git o cualquier sistema de control de versiones, como Subversion o Mercu
 - Trabajo remoto y distribuido
 - Control de calidad y revisión de código
 - Mantenimiento del software con herramientas integradas para gestionar proyectos complejos
+
+<br>
 
 ## 2. Primeros comandos de Git
 
@@ -48,6 +54,8 @@ git version x.x.xx
 - **git help :** Al ejecutar este comando les aparece las ayudas de git. Una descripcion basica de la mayoria de los comandos de git y su uso. Basicamente es la documentacion que pueden encotrar en la web pero en la consola. Esta opcion te da bastante contenido, en caso de querer salir de esa bista _preciona la tecla U_ `tecla U`.
 
 - **git init:** Inicializa una carpeta local como repositorio GIT. Se creara una nueva carpeta `.git` donde almacenará toda la información sobre nuestro proyecto.
+
+<br>
 
 ### 2.1. Configuracion inicial de de Git
 
@@ -94,6 +102,8 @@ Para guardar los cambios y salir precione la `tecla Esc`, y seguidamente escriba
 Esto significa: `w` = write(escribir), `q` = quick(salir) y `!` = para que lo haga inmediatamente.
 
 > Una regla no escrita de Git : Si no les da ningun mensaje de retroalimentacion significa que lo hizo correctamente...
+
+<br>
 
 ## 3. Nuestro primer repositorio
 
