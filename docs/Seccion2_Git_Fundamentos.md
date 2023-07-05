@@ -21,8 +21,6 @@
 - [ ] 8. [Demostracion de la creacion, puesta en escena y commits](#8-demostracion-de-la-creacion-puesta-en-escena-y-commits)
 - [ ] 9. [Diferentes formas de agregar archivos al escenario(git add)](#9-diferentes-formas-de-agregar-archivos-al-escenariogit-add)
 - [ ] 10. [Creando Alias para nuestros comandos](#10-creando-alias-para-nuestros-comandos)
-- [ ] 11. [](#)
-- [ ] 12. [](#)
 
 <br>
 
@@ -334,4 +332,4 @@ Se podría crear un alias como este: Este es un `Bonus ++`
 git config --global alias.lg "log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all"
 ```
 
-- [ ] 4. [indice](#indice)
+- [ ] [indice](#indice)
