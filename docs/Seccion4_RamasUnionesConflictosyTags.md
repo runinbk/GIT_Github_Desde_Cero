@@ -13,7 +13,10 @@
 - [ ] 3. [Merge : Fast-Forward](#3-merge--fast-forward)
 - [ ] 4. [Merge : Union Automatica](#4-merge--union-automatica)
 - [ ] 5. [Uniones con Conflictos](#5-uniones-con-conflictos)
-- [ ] 6. [](#)
+- [ ] 6. [Tags - Etiquetas](#6-tags---etiquetas)
+- [ ] 7. [Creando Etiquetas - Tags](#7-creando-etiquetas---tags)
+- [ ] 7. [](#)
+- [ ] 7. [](#)
 - [ ] 7. [](#)
 
 <br>
@@ -178,6 +181,74 @@ Con esta configuración ya podremos usar el comando `git pull origin main` para 
 
 Un conflicto es cuando dos ramas _modifican un mismo archivo en diferentes partes_, Git no sabe cual es la mejor versión del código para fusionar las diferencias entre ambas ramas y por tanto nos pide que decidamos qué hacer.
 
+Al momento de hacer `git merge rama-conflicto` git detecta el conflicto.
+
+Al momento de detectar el conflicto, Git aumenta lineas de texto en tu archivo conflicto y literalmente te escribe donde se realizo el conflicto y te indica tus opciones.
+Para resolverlo puedes elegir y eliminar el codigo que creas conveniente.
+
 En caso de tener conflictos al realizar una merge o rebase automaticamente aparecerá esta ventana donde podremos elegir cualquier opción disponible (eligiendo uno de los archivos y luego presionando "M" para marcarlo como solucionado en ese archivo). Siempre tendremos la posibilidad de resolver manualmente estos conflictos editando directamente el fichero generado por Git.
+
+<br>
+
+## 6. Tags - Etiquetas
+
+---
+
+Los tags son referencias a puntos específicos en el historial del proyecto, se utiliza para marcar versiones importantes o para realizar rollbacks cuando algo sale mal.
+
+Generalmente los tags son usados para :
+
+- Marcar una versión estable del proyecto (v1, v2...)
+- Identificar un release en particular
+- Enviar versiones al repositorio oficial o a nuestros clientes
+
+<br>
+
+## 7. Creando Etiquetas - Tags
+
+---
+
+Para crear un Tag hay varias formas :
+
+- **`git tag nombre_del_tag` ->** Crea la etiqueta localmente sin subirla al servidor remoto.
+- **`git push origin nombre_del_tag`**-> Sube la etiqueta al servidor remoto.
+  Ejemplo:
+
+```bash
+$ git tag nueva_version
+$ git push --tags #Sube las etiquetas locales al servidor remoto
+```
+
+También se pueden usar comandos más avanzados como por ejemplo:
+
+```bash
+#Creación de etiqueta con mensaje personalizado
+$ git tag -m "Mensaje" nuevo_tag
+#Eliminar etiqueta existente
+$ git tag -d old_tag
+#Listado de todas las etiquetas disponibles
+$ git tag
+#Listado de todas las etiquetas disponibles
+$ git show-ref --tags | cut -d / -f3-40
+```
+
+Los nombre de las etiquetas deben cumplir con algunos estándares y convenciones que dependen mucho de cada equipo/organización pero generalmente siguen el siguiente patrón:
+
+`<nombre_versión>-<número>`
+
+Por lo tanto si tenemos dos releases `v1.5.0` y `v2.0.0` podemos nombrarlas así:
+
+- `v1.5.0`: primer lanzamiento de la aplicación
+- `v2.0.0`: segundo lanzamiento de la aplicación
+
+Estos 3 numeros tiene el siguiente significado :
+
+- Primer número : Cada vez que incrementamos este numero, significa un gran cambio en nuestro proyecto o librería. Es decir, algo muy importante ha sido agregado o quitado del código fuente principal. Por ejemplo : si vamos a pasar de PHP 8.x a PHP 9.y debemos realizar muchas modificaciones para adaptarnos al nuevo entorno. En ese caso podra ser buena idea actualizar los nombres de las tags para incluirlo dentro del mismo rango semántico.
+
+- Segundo número : Se refiere a características adicionales que han sido agregadas al producto. Puede ser un parche, mejoras menores, corrección de errores, etcétera. No debe considerarse grandes cambios.
+
+- Tercer número : Se refiere a algunos bugs encontrado y parchados. No se consideran cambios grandes.
+
+Otra forma es seguir el estándar semver que define cómo numerar versiones software (https://semver.org/)
 
 - [ ] [Indice](#indice)
