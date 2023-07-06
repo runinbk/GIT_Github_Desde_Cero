@@ -19,9 +19,6 @@
 - [ ] 9. [Clonar un Repositorio](#9-clonar-un-repositorio)
 - [ ] 10. [Subir cambios locales al remoto](#10-subir-cambios-locales-al-remoto)
 - [ ] 11. [Git Pull Rebase](#11-git-pull-rebase)
-- [ ] 11. [](#)
-- [ ] 11. [](#)
-- [ ] 11. [](#)
 
 <br>
 
@@ -217,6 +214,10 @@ git rebase --continue
 Esto nos permitira continuar con el flujo de trabajo habitual sin tener problemas.
 
 Subimos los cambios con `git push` y listo, **_cambios subidos al repositorio de Github!!!_**
+
+---
+
+Para saber un poco mas del [flujo de Github](https://blog.mergify.com/understanding-the-github-pull-request-workflow/)
 
 ---
 
