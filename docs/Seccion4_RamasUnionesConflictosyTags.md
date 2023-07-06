@@ -9,8 +9,12 @@
 ---
 
 - [ ] 1. [Introduccion a la Seccion de Ramas](#1-introduccion-a-la-seccion-de-ramas)
-- [ ] 2. [](#)
-- [ ] 3. [](#)
+- [ ] 2. [Introduccion : Ramas, Uniones y Conflictos](#2-introduccion--ramas-uniones-y-conflictos)
+- [ ] 3. [Merge : Fast-Forward](#3-merge--fast-forward)
+- [ ] 4. [Merge : Union Automatica](#4-merge--union-automatica)
+- [ ] 5. [Uniones con Conflictos](#5-uniones-con-conflictos)
+- [ ] 6. [](#)
+- [ ] 7. [](#)
 
 <br>
 
@@ -143,5 +147,37 @@ Esto hará una fusión lineal del contenido de ambas ramas, lo que significa que
 ```bash
 git branch -d rama-villanos
 ```
+
+<br>
+
+## 4. Merge : Union Automatica
+
+---
+
+Primeramente, si yo quiero crear una rama y al mismo tiempo moverme a esa rama puedo utilizar el siguiente comando :
+
+```bash
+git checkout -b rama-trabajo # Donde en "rama-trabajo" va el nombre a la nueva rama que quieres crear y moverte
+```
+
+En el caso de que tengamos varias ramas diferentes trabajando sobre distintos archivos o carpetas del mismo repositorio Git es posible utilizar una técnica llamada "merge automatic" (también llamada auto-merging). Esta tecnica permite hacer merges sin tener que preocuparnos por resolver conflictos manuales y evita tener que realizar muchas veces el comando `git merge <branch_name>`.
+Para habilitar este modo automático debemos ejecutar el siguiente comando desde la terminal:
+
+```bash
+git config --global pull.rebase true # Habilitación global
+```
+
+Esto hará que todos nuestras futuras fusiones locales realizadas con `pull` o `fetch` se realicen mediante rebase en lugar de merge tradicional.
+Con esta configuración ya podremos usar el comando `git pull origin main` para actualizar localmente nuestro proyecto al último commit disponible en la rama principal remota.
+
+<br>
+
+## 5. Uniones con Conflictos
+
+---
+
+Un conflicto es cuando dos ramas _modifican un mismo archivo en diferentes partes_, Git no sabe cual es la mejor versión del código para fusionar las diferencias entre ambas ramas y por tanto nos pide que decidamos qué hacer.
+
+En caso de tener conflictos al realizar una merge o rebase automaticamente aparecerá esta ventana donde podremos elegir cualquier opción disponible (eligiendo uno de los archivos y luego presionando "M" para marcarlo como solucionado en ese archivo). Siempre tendremos la posibilidad de resolver manualmente estos conflictos editando directamente el fichero generado por Git.
 
 - [ ] [Indice](#indice)
