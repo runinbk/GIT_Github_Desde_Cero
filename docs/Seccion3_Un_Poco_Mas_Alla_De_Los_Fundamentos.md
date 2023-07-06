@@ -153,7 +153,7 @@ Nos dirigimos al achivo `heroes.md` y añadimos a linterna verde en el listado.
 Procedemos al `add` y `commit` :
 
 ```bash
-git -am "Heroes.md : Agregamos a Linterna Verde"
+git commit -am "Heroes.md : Agregamos a Linterna Verde"
 ```
 
 Con esto estamos listo para movernos en el tiempo.
