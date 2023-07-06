@@ -312,4 +312,4 @@ Modifique los campos deseados como si fuera a realizar un nuevo commit normalmen
 Esto se puede utilizar para separar commits, con la ayuda de otros comando.
 Si es asi al finalizar los cambios ejecute el comando `git rebase --continue`.
 
-- [ ] 6. [Indice](#indice)
+- [ ] [Indice](#indice)
