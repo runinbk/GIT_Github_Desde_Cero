@@ -144,4 +144,26 @@ Esto hará una fusión lineal del contenido de ambas ramas, lo que significa que
 git branch -d rama-villanos
 ```
 
+<br>
+
+## 4. Merge : Union Automatica
+
+---
+
+Primeramente, si yo quiero crear una rama y al mismo tiempo moverme a esa rama puedo utilizar el siguiente comando :
+
+```bash
+git checkout -b rama-trabajo # Donde en "rama-trabajo" va el nombre a la nueva rama que quieres crear y moverte
+```
+
+En el caso de que tengamos varias ramas diferentes trabajando sobre distintos archivos o carpetas del mismo repositorio Git es posible utilizar una técnica llamada "merge automatic" (también llamada auto-merging). Esta tecnica permite hacer merges sin tener que preocuparnos por resolver conflictos manuales y evita tener que realizar muchas veces el comando `git merge <branch_name>`.
+Para habilitar este modo automático debemos ejecutar el siguiente comando desde la terminal:
+
+```bash
+git config --global pull.rebase true # Habilitación global
+```
+
+Esto hará que todos nuestras futuras fusiones locales realizadas con `pull` o `fetch` se realicen mediante rebase en lugar de merge tradicional.
+Con esta configuración ya podremos usar el comando `git pull origin main` para actualizar localmente nuestro proyecto al último commit disponible en la rama principal remota.
+
 - [ ] [Indice](#indice)
