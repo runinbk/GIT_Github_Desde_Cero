@@ -11,8 +11,6 @@
 - [ ] 1. [Introduccion a la Seccion de Ramas](#1-introduccion-a-la-seccion-de-ramas)
 - [ ] 2. [](#)
 - [ ] 3. [](#)
-- [ ] 4. [](#)
-- [ ] 5. [](#)
 
 <br>
 
