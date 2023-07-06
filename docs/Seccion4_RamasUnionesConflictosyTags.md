@@ -9,8 +9,12 @@
 ---
 
 - [ ] 1. [Introduccion a la Seccion de Ramas](#1-introduccion-a-la-seccion-de-ramas)
-- [ ] 2. [](#)
-- [ ] 3. [](#)
+- [ ] 2. [Introduccion : Ramas, Uniones y Conflictos](#2-introduccion--ramas-uniones-y-conflictos)
+- [ ] 3. [Merge : Fast-Forward](#3-merge--fast-forward)
+- [ ] 4. [Merge : Union Automatica](#4-merge--union-automatica)
+- [ ] 5. [Uniones con Conflictos](#5-uniones-con-conflictos)
+- [ ] 6. [](#)
+- [ ] 7. [](#)
 
 <br>
 
@@ -165,5 +169,15 @@ git config --global pull.rebase true # Habilitación global
 
 Esto hará que todos nuestras futuras fusiones locales realizadas con `pull` o `fetch` se realicen mediante rebase en lugar de merge tradicional.
 Con esta configuración ya podremos usar el comando `git pull origin main` para actualizar localmente nuestro proyecto al último commit disponible en la rama principal remota.
+
+<br>
+
+## 5. Uniones con Conflictos
+
+---
+
+Un conflicto es cuando dos ramas _modifican un mismo archivo en diferentes partes_, Git no sabe cual es la mejor versión del código para fusionar las diferencias entre ambas ramas y por tanto nos pide que decidamos qué hacer.
+
+En caso de tener conflictos al realizar una merge o rebase automaticamente aparecerá esta ventana donde podremos elegir cualquier opción disponible (eligiendo uno de los archivos y luego presionando "M" para marcarlo como solucionado en ese archivo). Siempre tendremos la posibilidad de resolver manualmente estos conflictos editando directamente el fichero generado por Git.
 
 - [ ] [Indice](#indice)
